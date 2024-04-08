@@ -7,12 +7,13 @@ from vkwave.bots.utils.uploaders import DocUploader, PhotoUploader
 from vkwave.bots import create_api_session_aiohttp
 
 load_dotenv()
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.environ["TOKEN"]
+VK_USER_ID = os.environ["VK_USER_ID"]
 
 
 @pytest.fixture()
 def user_id():
-    return int(os.environ.get("VK_USER_ID", "578716413"))
+    return int(VK_USER_ID)
 
 
 @pytest.mark.asyncio

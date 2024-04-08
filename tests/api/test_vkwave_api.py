@@ -9,7 +9,7 @@ from vkwave.client.default import AIOHTTPClient
 from vkwave.types.objects import BaseBoolInt
 
 load_dotenv()
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.environ["TOKEN"]
 
 
 async def get_api():

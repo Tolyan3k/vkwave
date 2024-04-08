@@ -40,7 +40,7 @@ async def test_storage():
 
 @pytest.mark.asyncio
 async def test_vk_storage():
-    token = os.environ.get("VK_BOT_TOKEN")
+    token = os.environ["VK_BOT_TOKEN"]
     if not token:
         pytest.skip("unsupported configuration")
 
