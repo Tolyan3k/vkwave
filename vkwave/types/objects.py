@@ -13514,8 +13514,3 @@ class WidgetsWidgetPage(BaseModel):
         None,
         description='Page absolute URL'
     )
-
-
-for item in locals().copy().values():
-    if inspect.isclass(item) and issubclass(item, BaseModel):
-        item.update_forward_refs()
