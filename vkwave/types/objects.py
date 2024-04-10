@@ -13514,10 +13514,3 @@ class WidgetsWidgetPage(BaseModel):
         None,
         description='Page absolute URL'
     )
-
-for item in locals().copy().values():
-    if inspect.isclass(item) and issubclass(item, BaseModel):
-        try:
-            item.model_rebuild(force=True)
-        except:
-            pass

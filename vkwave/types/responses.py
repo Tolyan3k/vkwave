@@ -3080,11 +3080,3 @@ class WidgetsGetCommentsResponseModel(pydantic.BaseModel):
 class WidgetsGetPagesResponseModel(pydantic.BaseModel):
     count: typing.Optional[int]
     pages: typing.Optional[typing.List["WidgetsWidgetPage"]]
-
-
-for item in locals().copy().values():
-    if inspect.isclass(item) and issubclass(item, BaseModel):
-        try:
-            item.model_rebuild(force=True)
-        except:
-            pass
