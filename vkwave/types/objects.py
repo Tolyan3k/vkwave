@@ -75,7 +75,8 @@ class AccountAccountCounters(BaseModel):
 class AccountInfo(BaseModel):
     _2fa_required: typing.Optional["BaseBoolInt"] = Field(
         None,
-        description='Two factor authentication is enabled'
+        description='Two factor authentication is enabled',
+        alias="2fa_required",
     )
     country: typing.Optional[str] = Field(
         None,
@@ -4165,7 +4166,8 @@ class FriendsMutualFriend(BaseModel):
 class FriendsRequests(BaseModel):
     _from: typing.Optional[str] = Field(
         None,
-        description='ID of the user by whom friend has been suggested'
+        description='ID of the user by whom friend has been suggested',
+        alias="from",
     )
     mutual: typing.Optional["FriendsRequestsMutual"] = Field(
         None,
@@ -4191,7 +4193,8 @@ class FriendsRequestsMutual(BaseModel):
 class FriendsRequestsXtrMessage(BaseModel):
     _from: typing.Optional[str] = Field(
         None,
-        description='ID of the user by whom friend has been suggested'
+        description='ID of the user by whom friend has been suggested',
+        alias="from",
     )
     message: typing.Optional[str] = Field(
         None,
@@ -10854,7 +10857,8 @@ class SearchHint(BaseModel):
     )
     _global: typing.Optional["BaseBoolInt"] = Field(
         None,
-        description='Information whether the object has been found globally'
+        description='Information whether the object has been found globally',
+        alias="global",
     )
     group: typing.Optional["GroupsGroup"] = Field(
         None,
@@ -11908,7 +11912,8 @@ class UsersCareer(BaseModel):
     )
     _from: typing.Optional[int] = Field(
         None,
-        description='From year'
+        description='From year',
+        alias="from",
     )
     group_id: typing.Optional[int] = Field(
         None,
@@ -12073,7 +12078,8 @@ class UsersMilitary(BaseModel):
     )
     _from: typing.Optional[int] = Field(
         None,
-        description='From year'
+        description='From year',
+        alias="from",
     )
     id: typing.Optional[int] = Field(
         None,
@@ -12216,7 +12222,8 @@ class UsersSchool(BaseModel):
     )
     _class: typing.Optional[str] = Field(
         None,
-        description='School class letter'
+        description='School class letter',
+        alias="class",
     )
     country: typing.Optional[int] = Field(
         None,
