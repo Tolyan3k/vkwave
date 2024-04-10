@@ -1,6 +1,6 @@
 import pydantic
 
-from .objects import *
+from objects import *
 
 
 class AccountChangePasswordResponse(pydantic.BaseModel):
@@ -3084,4 +3084,7 @@ class WidgetsGetPagesResponseModel(pydantic.BaseModel):
 
 for item in locals().copy().values():
     if inspect.isclass(item) and issubclass(item, BaseModel):
-        item.update_forward_refs()
+        try:
+            item.model_rebuild(force=True)
+        except:
+            pass
