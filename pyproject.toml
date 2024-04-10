@@ -6,7 +6,7 @@ authors = ["prostomarkeloff", "kesha1225"]
 license = "MIT"
 readme = "readme.md"
 homepage = "https://github.com/fscdev/vkwave"
-repository = "https://github.com/fscdev/vkwave"
+repository = "https://github.com/Tolyan3k/vkwave"
 keywords = [
         "vk",
         "vkontakte",
