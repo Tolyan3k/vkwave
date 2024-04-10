@@ -1,6 +1,6 @@
 import pydantic
 
-from objects import *
+from .objects import *
 
 
 class AccountChangePasswordResponse(pydantic.BaseModel):
