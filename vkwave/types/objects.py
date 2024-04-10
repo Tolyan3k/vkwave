@@ -73,7 +73,7 @@ class AccountAccountCounters(BaseModel):
 
 
 class AccountInfo(BaseModel):
-    _2fa_required: typing.Optional["BaseBoolInt"] = Field(
+    two_fa_required: typing.Optional["BaseBoolInt"] = Field(
         None,
         description='Two factor authentication is enabled',
         alias="2fa_required",
@@ -4164,7 +4164,7 @@ class FriendsMutualFriend(BaseModel):
 
 
 class FriendsRequests(BaseModel):
-    _from: typing.Optional[str] = Field(
+    from_: typing.Optional[str] = Field(
         None,
         description='ID of the user by whom friend has been suggested',
         alias="from",
@@ -4191,7 +4191,7 @@ class FriendsRequestsMutual(BaseModel):
 
 
 class FriendsRequestsXtrMessage(BaseModel):
-    _from: typing.Optional[str] = Field(
+    from_: typing.Optional[str] = Field(
         None,
         description='ID of the user by whom friend has been suggested',
         alias="from",
@@ -10855,7 +10855,7 @@ class SearchHint(BaseModel):
         None,
         description='Object description'
     )
-    _global: typing.Optional["BaseBoolInt"] = Field(
+    global_: typing.Optional["BaseBoolInt"] = Field(
         None,
         description='Information whether the object has been found globally',
         alias="global",
@@ -11910,7 +11910,7 @@ class UsersCareer(BaseModel):
         None,
         description='Country ID'
     )
-    _from: typing.Optional[int] = Field(
+    from_: typing.Optional[int] = Field(
         None,
         description='From year',
         alias="from",
@@ -12076,7 +12076,7 @@ class UsersMilitary(BaseModel):
         None,
         description='Country ID'
     )
-    _from: typing.Optional[int] = Field(
+    from_: typing.Optional[int] = Field(
         None,
         description='From year',
         alias="from",
@@ -12220,7 +12220,7 @@ class UsersSchool(BaseModel):
         None,
         description='City ID'
     )
-    _class: typing.Optional[str] = Field(
+    class_: typing.Optional[str] = Field(
         None,
         description='School class letter',
         alias="class",
